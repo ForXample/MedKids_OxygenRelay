@@ -38,4 +38,24 @@ public class UIManager : MonoBehaviour
         Application.Quit();
         Debug.Log("Game Quit.");
     }
+
+    public void SelectLevel()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+
+        if (scene.name == "Level01")
+        {
+            SceneManager.LoadScene(2);
+        }
+
+        if (scene.name == "Level02")
+        {
+            SceneManager.LoadScene(3);
+        }
+
+        if (scene.name == "Level03")
+        {
+            Debug.Log("Game Complete.");
+        }
+    }
 }
